@@ -1,11 +1,16 @@
 function calc(a){
-    if (a[1]==="+"){
-        return parseInt(a[0])+parseInt(a[2])
-    } else if (a[1]==="-"){
-        return parseInt(a[0])-parseInt(a[2])
-    } else if (a[1]==="*"){
-        return parseInt(a[0])*parseInt(a[2])
+    if (a.includes("+")){
+        a=a.split("+")
+        return parseInt(a[0])+parseInt(a[1])
+    } else if (a.includes("-")){
+        a=a.split("-")
+        return parseInt(a[0])-parseInt(a[1])
+    } else if (a.includes("*")){
+        a=a.split("*")
+        return parseInt(a[0])*parseInt(a[1])
     } else{
-        return parseInt(a[0])/parseInt(a[2])
+        a=a.split("/")
+        return parseInt(a[0])/parseInt(a[1])
     }
 }
+alert(calc("30/3"))
