@@ -13,4 +13,3 @@ function calc(a){
         return parseInt(a[0])/parseInt(a[1])
     }
 }
-alert(calc("30/3"))
