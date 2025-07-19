@@ -2,7 +2,6 @@ let result=false
 let secOper=false
 function calc(a){
     result=true
-    secOper=false
     if (a.includes("+")){
         a=a.split("+")
         return parseInt(a[0])+parseInt(a[1])
@@ -33,12 +32,20 @@ for (let i =0; i<9;i++){
 }
 for (let i =0; i<4;i++){
     operations[i].addEventListener("click", () =>{
-        display.append(operations[i].textContent)
-        secOper=true
+        if (secOper){
+            display.textContent=calc(display.textContent)
+            result=false
+            display.append(operations[i].textContent)
+        }
+        else{
+            display.append(operations[i].textContent)
+            secOper=true
+        }
     })
 }
 operations[4].addEventListener("click",() =>{
-        display.textContent=calc(display.textContent)
+    display.textContent=calc(display.textContent)
+    secOper=false
 })
 buttons[9].addEventListener("click",() =>{
     display.append(buttons[9].textContent)
