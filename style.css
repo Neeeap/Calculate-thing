@@ -21,4 +21,5 @@
     background-color: white;
     width:150px;
     height:100px;
+    word-wrap: break-word;
 }
