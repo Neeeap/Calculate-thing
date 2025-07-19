@@ -9,6 +9,9 @@ function calc(a){
         let errMess=document.createElement("p")
         errMess.textContent="Nope, that ain't gonna happen!"
         calcBody.append(errMess)
+        setTimeout(() => {
+                errMess.style.display = 'none';
+            }, 5000);
         return ""
     }
     result=true

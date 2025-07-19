@@ -16,5 +16,8 @@ what to do when the user presses equal on a single number, it prob should stay, 
 yet another boolean?
 guess what i used another boolean, and it seems to handle the rigorous testing pretty well
 what about other cases now?
+i might just leave this as it is because most of the errors are because of the user, not me, so i'll just tell that it wont work, and that they'll have to try again
+
+
 4.when user enters two consecutive operators, the last one should be replaced with the curr one (solved)
 tbh i forgot to document about this, but basically i just added another eles if block checking if the last character is an operator or not.
