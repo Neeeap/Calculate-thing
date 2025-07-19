@@ -1,0 +1,20 @@
+what problems do i need to solve?
+1.clearing result when inputting new number after pressing equal button (solved)
+used boolean value
+2.when there is a second operator in the display, calculate the first pair,then add the new operator(solved)
+another boolean value?
+what should happen?
+every operator input, check if theres another one already, if so, get the result then add new operator
+by using what? boolean, loop, includes()?
+boolean may be efficient, but prob need a lot of if statements since it may be in conjunction with result boolean from first problem
+
+good news: this problem has been SOLVED
+how? at first, when the boolean was true, it would go through the calc function, essentially acting like an equal sign and clearing the result when i pressed a new number, so i just set result to false every time secOpr was true, and it seems to work pretty fine!
+3.error handling i guess?
+what should be displayed when the user makes a mistake? an error message.
+what to do when the user presses equal on a single number, it prob should stay, and not display an error
+yet another boolean?
+guess what i used another boolean, and it seems to handle the rigorous testing pretty well
+what about other cases now?
+4.when user enters two consecutive operators, the last one should be replaced with the curr one (solved)
+tbh i forgot to document about this, but basically i just added another eles if block checking if the last character is an operator or not.
