@@ -21,6 +21,12 @@ let buttons=numbers.querySelectorAll("button")
 let ope=document.querySelector("#operators")
 let operations=ope.querySelectorAll("button")
 let display=document.querySelector("p")
+let clear=document.querySelector("#clear")
+clear.addEventListener("click", () =>{
+    display.textContent=""
+    result=false
+    secOper=false
+})
 for (let i =0; i<9;i++){
     buttons[i].addEventListener("click", () =>{
         if (result){
