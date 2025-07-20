@@ -1,17 +1,18 @@
 #calculator{
-    background-color: yellow;
+    background-color: darkgray;
     width: fit-content;
     height: fit-content;
-    padding: 5%;
+    padding: 2%;
     display:flex;
     flex-direction: column;
     margin: 0 auto;
+    border-radius: 90px;
 }
 #nums{
     display:flex;
     flex-wrap:wrap;
-    background-color: yellow;
-    width:80px;
+    background-color: darkgray;
+    width:150px;
     justify-content: center;
 }
 #operators{
@@ -21,12 +22,34 @@
 }
 #display{
     background-color: white;
-    width:150px;
-    height:100px;
+    width:200px;
+    min-height: 23px;
+    height:fit-content;
     word-wrap: break-word;
     font-size: 20px;
+    margin-bottom: 50px;
 }
 #buttons{
     display: flex;
     justify-content: center;
+}
+p{
+    margin:0;
+}
+h1{
+    margin-bottom: 50px;
+}
+button{
+    background-color: lightgray;
+    border-radius: 5px;
+    font-size: 30px;
+    width:50px;
+    height:50px;
+}
+#clear,#backspace{
+    width: auto;
+    flex:1 1 auto;
+}
+#clearButtons{
+    display: flex;
 }
