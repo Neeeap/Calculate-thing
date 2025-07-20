@@ -1,12 +1,15 @@
+body{
+    display: flex;
+}
 #calculator{
     background-color: darkgray;
     width: fit-content;
     height: fit-content;
-    padding: 2%;
+    padding: 22px;
     display:flex;
     flex-direction: column;
-    margin: 0 auto;
-    border-radius: 90px;
+    margin-right: auto;
+    border-radius: 70px;
 }
 #nums{
     display:flex;
@@ -55,4 +58,8 @@ button{
 }
 #clearButtons{
     display: flex;
+}
+#intro{
+    word-wrap: break-word;
+    width:550px;
 }

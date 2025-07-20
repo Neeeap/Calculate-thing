@@ -20,10 +20,10 @@ i might just leave this as it is because most of the errors are because of the u
 
 
 4.when user enters two consecutive operators, the last one should be replaced with the curr one (solved)
-tbh i forgot to document about this, but basically i just added another eles if block checking if the last character is an operator or not.
+tbh i forgot to document about this, but basically i just added another else if block checking if the last character is an operator or not.
 
 5.adding decimal input (solved)
-it is now day 2 of making this project, i added a button, and guess what? another boolean to stop users from entering mutliple decimal in a single number, at first when i added two float numbers, it turned into an integer, and turns out it was because i was using parseInt, so I googled and used + before the numbers so it turns it into a number, whether it was an int or float
+it is now day 2 of making this project, i added a button, and guess what? another boolean to stop users from entering mutliple decimals in a single number, at first when i added two float numbers, it turned into an integer, and turns out it was because i was using parseInt, so I googled and used + before the numbers so it turns it into a number, whether it was an int or float
 
 6.add backspace supprt(solved)
 everytime i successfully implement a feature, the more im proud of myself :). this one was pretty simple though, just delete the last character, and if its an operator, set secOpr back to false so it doesnt mess up some of the existing code
@@ -31,9 +31,9 @@ everytime i successfully implement a feature, the more im proud of myself :). th
 
 UH OH
 theres a problem when a number gets very big and it turns into the e+ format or whatever, and that format has a plus in it, which my code will then split the display with that + and it'll give out NaN.
-After readinbg through the discord, I suppose I'll just leave it alone since they don't tell you to fix the scientific notation in the assignment
+After reading through the discord, I suppose I'll just leave it alone since they don't tell you to fix the scientific notation in the assignment
 
-7.keyboard
+7.keyboard (mostly solved)
 this one seems pretty difficult, a method i can think of rn is by implementing a switch, since adding it in a for loop did not seem to help at all
 i just thought of adding an if statement checking if the key pressed is in a string of 0-9, i may do that for the operators as well
 crap i may have to rewrite how i add numbers, it may not be that bad tho, since i might be able to keep the logic inside the functions
