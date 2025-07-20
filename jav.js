@@ -46,39 +46,43 @@ clear.addEventListener("click", () =>{
     oneNum=true
     deci=false
 })
-function add(i){
+function addNum(i){
     if (result){
         display.textContent=""
         result=false
     }
-    display.append(i)}
-for (let i =0; i<9;i++){
-    buttons[i].addEventListener("click", () =>{
-        add(buttons[i].textContent)
-    })
+    display.append(i)
 }
-for (let i =0; i<4;i++){
-    operations[i].addEventListener("click", () =>{
-        if (result){
+function addOp(i){
+    if (result){
             result=false
-            display.append(operations[i].textContent)
+            display.append(i)
             secOper=true
         }
         else if ("+-*/".includes(display.textContent[display.textContent.length-1])){
             display.textContent=display.textContent.slice(0,-1)
-            display.append(operations[i].textContent)
+            display.append(i)
         }
         else if (secOper){
             display.textContent=calc(display.textContent)
             result=false
-            display.append(operations[i].textContent)
+            display.append(i)
         }
         else{
-            display.append(operations[i].textContent)
+            display.append(i)
             secOper=true
         }
         oneNum=false
         deci=false
+}
+for (let i =0; i<=9;i++){
+    buttons[i].addEventListener("click", () =>{
+        addNum(buttons[i].textContent)
+    })
+}
+for (let i =0; i<4;i++){
+    operations[i].addEventListener("click", () =>{
+        addOp(operations[i].textContent)
     })
 }
 backspace.addEventListener("click", () =>{
@@ -98,13 +102,6 @@ operations[5].addEventListener("click",() =>{
     secOper=false
     oneNum=true
 })
-buttons[9].addEventListener("click",() =>{
-    if (result){
-            display.textContent=""
-            result=false
-        }
-    display.append(buttons[9].textContent)
-})
 document.addEventListener("keydown", (a) =>{
     if ("0123456789".includes(a.key)){
 
@@ -112,8 +109,51 @@ document.addEventListener("keydown", (a) =>{
         case (result):
             display.textContent=""
             result=false
+        case "0":
+            addNum("0")
+            break
         case "1":
-            add()
+            addNum("1")
+            break
+        case "2":
+            addNum("2")
+            break
+        case "3":
+            addNum("3")
+            break
+        case "4":
+            addNum("4")
+            break
+        case "5":
+            addNum("5")
+            break
+        case "6":
+            addNum("6")
+            break
+        case "7":
+            addNum("7")
+            break
+        case "8":
+            addNum("8")
+            break
+        case "9":
+            addNum("9")
+            break
     }
-}
+    } else if ("+-/*".includes(a.key)){
+        switch (a.key){
+            case "+":
+                addOp("+")
+                break
+            case "-":
+                addOp("-")
+                break
+            case "*":
+                addOp("*")
+                break
+            case "/":
+                addOp("/")
+                break
+        }
+    }
 })

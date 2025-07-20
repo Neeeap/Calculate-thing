@@ -32,3 +32,10 @@ everytime i successfully implement a feature, the more im proud of myself :). th
 UH OH
 theres a problem when a number gets very big and it turns into the e+ format or whatever, and that format has a plus in it, which my code will then split the display with that + and it'll give out NaN.
 After readinbg through the discord, I suppose I'll just leave it alone since they don't tell you to fix the scientific notation in the assignment
+
+7.keyboard
+this one seems pretty difficult, a method i can think of rn is by implementing a switch, since adding it in a for loop did not seem to help at all
+i just thought of adding an if statement checking if the key pressed is in a string of 0-9, i may do that for the operators as well
+crap i may have to rewrite how i add numbers, it may not be that bad tho, since i might be able to keep the logic inside the functions
+just added a bunch of cases for the switch, and yessir, it works just as intended! onto the operators
+added support for some of the operators, and its actually coming together really well!
