@@ -39,3 +39,5 @@ i just thought of adding an if statement checking if the key pressed is in a str
 crap i may have to rewrite how i add numbers, it may not be that bad tho, since i might be able to keep the logic inside the functions
 just added a bunch of cases for the switch, and yessir, it works just as intended! onto the operators
 added support for some of the operators, and its actually coming together really well!
+time to handle the rest now.
+and just like that, every button (except the clear button, idk what key to choose) has keyboard support!

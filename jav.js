@@ -104,7 +104,6 @@ operations[5].addEventListener("click",() =>{
 })
 document.addEventListener("keydown", (a) =>{
     if ("0123456789".includes(a.key)){
-
     switch (a.key){
         case (result):
             display.textContent=""
@@ -140,7 +139,7 @@ document.addEventListener("keydown", (a) =>{
             addNum("9")
             break
     }
-    } else if ("+-/*".includes(a.key)){
+    } else if ("+-/*=.Backspace".includes(a.key)){
         switch (a.key){
             case "+":
                 addOp("+")
@@ -153,6 +152,23 @@ document.addEventListener("keydown", (a) =>{
                 break
             case "/":
                 addOp("/")
+                break
+            case "=":
+                display.textContent=calc(display.textContent)
+                secOper=false
+                oneNum=true
+                break
+            case ".":
+                if (!deci){
+                display.append(operations[4].textContent)
+                deci=true
+                }
+                break
+            case "Backspace":
+                if ("+-*/".includes(display.textContent[display.textContent.length-1])){
+                    secOper=false
+                }
+                display.textContent=display.textContent.slice(0,-1)
                 break
         }
     }
