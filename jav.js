@@ -44,14 +44,17 @@ clear.addEventListener("click", () =>{
     result=false
     secOper=false
     oneNum=true
+    deci=false
 })
+function add(i){
+    if (result){
+        display.textContent=""
+        result=false
+    }
+    display.append(i)}
 for (let i =0; i<9;i++){
     buttons[i].addEventListener("click", () =>{
-        if (result){
-            display.textContent=""
-            result=false
-        }
-        display.append(buttons[i].textContent)
+        add(buttons[i].textContent)
     })
 }
 for (let i =0; i<4;i++){
@@ -101,4 +104,16 @@ buttons[9].addEventListener("click",() =>{
             result=false
         }
     display.append(buttons[9].textContent)
+})
+document.addEventListener("keydown", (a) =>{
+    if ("0123456789".includes(a.key)){
+
+    switch (a.key){
+        case (result):
+            display.textContent=""
+            result=false
+        case "1":
+            add()
+    }
+}
 })
