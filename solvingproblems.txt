@@ -21,3 +21,6 @@ i might just leave this as it is because most of the errors are because of the u
 
 4.when user enters two consecutive operators, the last one should be replaced with the curr one (solved)
 tbh i forgot to document about this, but basically i just added another eles if block checking if the last character is an operator or not.
+
+5.adding decimal input (solved)
+it is now day 2 of making this project, i added a button, and guess what? another boolean to stop users from entering mutliple decimal in a single number, at first when i added two float numbers, it turned into an integer, and turns out it was because i was using parseInt, so I googled and used + before the numbers so it turns it into a number, whether it was an int or float

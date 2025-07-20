@@ -1,6 +1,7 @@
 let result=false
 let secOper=false
 let oneNum=true
+let deci=false
 function calc(a){
     if (oneNum){
         return a
@@ -18,16 +19,16 @@ function calc(a){
     oneNum=true
     if (a.includes("+")){
         a=a.split("+")
-        return parseInt(a[0])+parseInt(a[1])
+        return +a[0]+ +a[1]
     } else if (a.includes("-")){
         a=a.split("-")
-        return parseInt(a[0])-parseInt(a[1])
+        return +a[0]- +a[1]
     } else if (a.includes("*")){
         a=a.split("*")
-        return parseInt(a[0])*parseInt(a[1])
+        return +a[0]* +a[1]
     } else{
         a=a.split("/")
-        return parseInt(a[0])/parseInt(a[1])
+        return +a[0]/ +a[1]
     }
 }
 let calcBody=document.querySelector("#calculator")
@@ -73,9 +74,16 @@ for (let i =0; i<4;i++){
             secOper=true
         }
         oneNum=false
+        deci=false
     })
 }
 operations[4].addEventListener("click",() =>{
+    if (!deci){
+        display.append(operations[4].textContent)
+        deci=true
+    }
+})
+operations[5].addEventListener("click",() =>{
     display.textContent=calc(display.textContent)
     secOper=false
     oneNum=true
