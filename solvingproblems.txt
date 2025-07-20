@@ -24,3 +24,6 @@ tbh i forgot to document about this, but basically i just added another eles if 
 
 5.adding decimal input (solved)
 it is now day 2 of making this project, i added a button, and guess what? another boolean to stop users from entering mutliple decimal in a single number, at first when i added two float numbers, it turned into an integer, and turns out it was because i was using parseInt, so I googled and used + before the numbers so it turns it into a number, whether it was an int or float
+
+6.add backspace supprt(solved)
+everytime i successfully implement a feature, the more im proud of myself :). this one was pretty simple though, just delete the last character, and if its an operator, set secOpr back to false so it doesnt mess up some of the existing code

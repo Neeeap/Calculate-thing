@@ -38,6 +38,7 @@ let ope=document.querySelector("#operators")
 let operations=ope.querySelectorAll("button")
 let display=document.querySelector("p")
 let clear=document.querySelector("#clear")
+let backspace=document.querySelector("#backspace")
 clear.addEventListener("click", () =>{
     display.textContent=""
     result=false
@@ -77,6 +78,12 @@ for (let i =0; i<4;i++){
         deci=false
     })
 }
+backspace.addEventListener("click", () =>{
+    if ("+-*/".includes(display.textContent[display.textContent.length-1])){
+        secOper=false
+    }
+    display.textContent=display.textContent.slice(0,-1)
+})
 operations[4].addEventListener("click",() =>{
     if (!deci){
         display.append(operations[4].textContent)
